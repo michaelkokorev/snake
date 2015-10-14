@@ -21,19 +21,9 @@ namespace Snake
             leftLine.Draw();
             rightLine.Draw();
 
-
-
-            Point p1 = new Point(1, 3, '*');
-            Point p2 = new Point(4, 5, '#');
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-
-            foreach (Point point in pList) point.Draw();
-
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
-            line.Draw();
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
 
             Console.ReadLine();
         }
